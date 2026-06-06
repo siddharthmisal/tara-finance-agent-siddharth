@@ -148,12 +148,12 @@ const planActivities = createStep({
 
       Maintain this exact formatting for consistency, using the emoji and section headers as shown.`;
 
-    const response = await agent.stream([
-      {
-        role: 'user',
-        content: prompt,
-      },
-    ]);
+    const response = await agent.generate([
+  {
+    role: "user",
+    content: prompt,
+  },
+]);
 
     let activitiesText = '';
 
